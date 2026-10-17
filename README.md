@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# Toastmasters Pathways Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An unofficial, easier-to-follow guide to [Toastmasters Pathways](https://www.toastmasters.org/education/pathways):
+explore each path, see the projects at every level, and figure out your next step.
 
-Currently, two official plugins are available:
+> Not affiliated with or endorsed by Toastmasters International.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React + TypeScript (Vite)
+- MUI (Material UI)
+- oxlint + Prettier
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Scripts
+
+| Script                 | Description                              |
+| ---------------------- | ---------------------------------------- |
+| `npm run dev`          | Start the dev server                     |
+| `npm run build`        | Type-check and build for production      |
+| `npm run preview`      | Preview the production build             |
+| `npm run lint`         | Lint with oxlint (`lint:fix` to autofix) |
+| `npm run format`       | Format with Prettier                     |
+| `npm run format:check` | Check formatting                         |
+| `npm run check`        | Lint + format check + type-check         |
